@@ -5,7 +5,7 @@ A research framework for testing whether limit order book state predicts short-h
 Companion code for the paper:
 
 > **When Does Limit Order Book Information Constitute Tradable Alpha?**
-> William Odumosu, August 2026. [`paper/lob_alpha.pdf`](paper/lob_alpha.pdf) (33 pages), LaTeX source in [`paper/lob_alpha.tex`](paper/lob_alpha.tex).
+> William Odumosu, August 2026. 
 > Five NASDAQ instruments, 953,829 events. Three of four signals are genuinely predictive on every instrument. None survives the spread.
 
 ## What this does
@@ -173,7 +173,6 @@ src/lob_alpha/
     robustness/                walk_forward, bootstrap, multiple_testing, stress
 tests/                         80 tests, including synthetic recovery
 docs/protocol.md               the frozen research protocol and known limitations
-paper/                         outline and working draft
 notebooks/                     exploration only, never a reported result
 ```
 
@@ -190,3 +189,5 @@ Raw data is read-only. Cleaning writes to `data/processed/` and records every dr
 ## Licence
 
 MIT.
+
+Thanks for reading :)
