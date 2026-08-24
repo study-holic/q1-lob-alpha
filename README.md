@@ -1,4 +1,4 @@
-#Limit Order Book: Alpha Research Framework
+# Limit Order Book: Alpha Research Framework
 
 A research framework for testing whether limit order book state predicts short-horizon price moves, and whether any of that prediction survives realistic execution costs.
 
