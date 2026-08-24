@@ -1,0 +1,8 @@
+{
+  "n_signals": 4,
+  "n_horizons": 6,
+  "n_regime_cells": 9,
+  "n_instruments": 5,
+  "total_hypotheses": 1080,
+  "expected_false_positives_at_5pct": 54.0
+}

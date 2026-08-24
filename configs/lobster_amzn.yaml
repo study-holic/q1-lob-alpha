@@ -1,0 +1,51 @@
+# Real data: LOBSTER AMZN, 2012-06-21, NASDAQ, 5 levels available.
+#
+# One instrument and one session, which caps what can be concluded. Instrument
+# stability is vacuous on one name, period stability degrades to intraday
+# sub-periods, and the cross-sectional standard error has one observation. The
+# run is still worth doing: it is the first contact between this pipeline and
+# real microstructure, and it is where synthetic-data assumptions break.
+
+experiment:
+  name: lobster_amzn
+  seed: 0
+
+data:
+  source: lobster
+  path: data/raw
+  levels: 1
+  sessions:
+    method: calendar_day
+    drop_short: true
+  cleaning:
+    drop_locked: true
+    max_relative_jump: 0.05
+
+signals: [ofi, queue_imbalance, microprice_deviation, spread]
+
+targets:
+  horizons: [1, 5, 10, 25, 50, 100]
+
+evaluation:
+  n_boot: 300
+  n_perm: 500
+  block: 1000
+  regime_window: 5000
+  headline_horizon: 10
+
+backtest:
+  strategy:
+    signals: [ofi]
+    threshold: 1.0
+    zscore_window: 5000
+  costs:
+    fixed_bps: 0.0
+    half_spread_multiplier: 1.0
+  execution:
+    level: 2
+    latency_events: 1
+
+robustness:
+  walk_forward_folds: 5
+  randomisation_draws: 50
+  run: [cost, threshold, execution, period, randomisation, subsampling]

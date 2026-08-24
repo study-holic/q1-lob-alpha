@@ -1,0 +1,5 @@
+signal,peak_horizon,peak_abs_ic,half_life_events,decayed_within_tested_range,half_life_seconds
+microprice_deviation,100.0,0.3060257328449498,,False,
+ofi,100.0,0.16787863585135987,,False,
+queue_imbalance,100.0,0.2920279390518332,,False,
+spread,100.0,0.00873290765032509,,False,

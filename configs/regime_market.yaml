@@ -1,0 +1,21 @@
+# Ground truth: the OFI relationship exists only when the spread is wide.
+#
+# The regime conditioning stage should recover that, and the pooled IC should
+# understate it. This is the check that the regime machinery has power rather
+# than just producing plausible-looking tables.
+
+experiment:
+  name: regime_market
+  seed: 3
+
+data:
+  synthetic:
+    mode: regime
+    beta: 0.18
+    n_events: 30000
+    seed: 3
+
+backtest:
+  strategy:
+    signals: [ofi]
+    threshold: 1.0

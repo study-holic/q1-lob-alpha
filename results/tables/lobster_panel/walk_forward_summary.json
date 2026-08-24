@@ -1,0 +1,7 @@
+{
+  "mean_test_sharpe": -0.018109770238275986,
+  "mean_train_sharpe": -0.013741612163830758,
+  "folds_positive_test": 0,
+  "n_folds": 5,
+  "in_sample_inflation": 0.004368158074445228
+}

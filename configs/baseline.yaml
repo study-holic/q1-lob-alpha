@@ -1,0 +1,50 @@
+# Baseline experiment.
+#
+# The synthetic source ships with the repository so that the pipeline runs end
+# to end with no data licence. Point `source: file` at a real dataset and the
+# rest of the experiment is unchanged.
+
+experiment:
+  name: baseline
+  seed: 0
+  output_dir: results
+
+data:
+  source: synthetic
+  synthetic:
+    n_instruments: 4
+    n_events: 30000
+    mode: ofi        # null | ofi | regime
+    beta: 0.12
+    seed: 0
+  cleaning:
+    drop_locked: true
+    max_relative_jump: 0.05
+
+signals:
+  - ofi
+  - queue_imbalance
+  - microprice_deviation
+  - spread
+
+targets:
+  horizons: [1, 5, 10, 25, 50, 100]
+
+evaluation:
+  n_boot: 200
+  block: 500
+  n_perm: 500
+  headline_horizon: 10
+
+backtest:
+  strategy:
+    signals: [ofi]
+    threshold: 1.0
+    zscore_window: 2000
+  costs:
+    fixed_bps: 0.0
+    half_spread_multiplier: 1.0
+    impact_coefficient: 0.0
+  execution:
+    level: 2
+    latency_events: 1

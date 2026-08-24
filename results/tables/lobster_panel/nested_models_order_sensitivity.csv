@@ -1,0 +1,9 @@
+entry_order,model,signals,n_train,n_test,r2_in_sample,r2_out_of_sample,incremental_oos_r2
+queue_imbalance before microprice_deviation,M1,ofi,667577,286107,0.010661200611350452,0.02179330092482068,0.02179330092482068
+queue_imbalance before microprice_deviation,M2,ofi + queue_imbalance,667577,286107,0.03565781505761778,0.05484648647330037,0.03305318554847969
+queue_imbalance before microprice_deviation,M3,ofi + queue_imbalance + microprice_deviation,667577,286107,0.03577918041392103,0.054398292898636624,-0.00044819357466374665
+queue_imbalance before microprice_deviation,M4,ofi + queue_imbalance + microprice_deviation + spread,667577,286107,0.0362657093368971,0.05313251066715574,-0.001265782231480883
+microprice_deviation before queue_imbalance,M1,ofi,667577,286107,0.010661200611350452,0.02179330092482068,0.02179330092482068
+microprice_deviation before queue_imbalance,M2,ofi + microprice_deviation,667577,286107,0.02979883252797899,0.05007544836141087,0.028282147436590188
+microprice_deviation before queue_imbalance,M3,ofi + microprice_deviation + queue_imbalance,667577,286107,0.03577918041392103,0.054398292898638734,0.004322844537227866
+microprice_deviation before queue_imbalance,M4,ofi + microprice_deviation + queue_imbalance + spread,667577,286107,0.03626570933689699,0.05313251066715574,-0.0012657822314829925

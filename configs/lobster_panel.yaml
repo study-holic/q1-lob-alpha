@@ -1,0 +1,55 @@
+# Real data: LOBSTER samples, NASDAQ, 2012-06-21, five instruments.
+#
+# AAPL, AMZN, GOOG, INTC, and MSFT, one trading day each, level 1 of a 10-level
+# export. Five instruments make instrument stability and the cross-sectional
+# standard error meaningful. One session does not: period stability degrades to
+# intraday sub-periods, and no result here speaks to day-to-day persistence.
+
+experiment:
+  name: lobster_panel
+  seed: 0
+
+data:
+  source: lobster
+  path: data/raw
+  levels: 1
+  sessions:
+    method: calendar_day
+    drop_short: true
+  cleaning:
+    drop_locked: true
+    max_relative_jump: 0.05
+
+signals: [ofi, queue_imbalance, microprice_deviation, spread]
+
+targets:
+  horizons: [1, 5, 10, 25, 50, 100]
+
+evaluation:
+  n_boot: 150
+  # The IC shift test is exact (every admissible shift, via cross-correlation),
+  # so n_perm only applies to the sampled fallback path for non-correlation
+  # statistics. It no longer sets the resolution of any reported p-value.
+  n_perm: 2000
+  block: 2000
+  regime_window: 10000
+  vol_window: 500
+  headline_horizon: 10
+
+backtest:
+  strategy:
+    signals: [ofi]
+    threshold: 1.0
+    zscore_window: 10000
+  costs:
+    fixed_bps: 0.0
+    half_spread_multiplier: 1.0
+  execution:
+    level: 2
+    latency_events: 1
+
+robustness:
+  walk_forward_folds: 5
+  randomisation_draws: 24
+  strides: [1, 2, 5]
+  run: [cost, threshold, execution, instrument, period, randomisation, subsampling]

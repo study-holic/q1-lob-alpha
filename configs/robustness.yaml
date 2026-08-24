@@ -1,0 +1,15 @@
+# The full stress battery. Slower, and the one whose output goes in the
+# robustness section of the paper.
+
+experiment:
+  name: robustness
+
+evaluation:
+  n_boot: 400
+  n_perm: 300
+
+robustness:
+  walk_forward_folds: 6
+  randomisation_draws: 50
+  strides: [1, 2, 5, 10]
+  run: [cost, threshold, execution, instrument, period, randomisation, subsampling]

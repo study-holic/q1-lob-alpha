@@ -1,0 +1,11 @@
+rule,rows_dropped,rows_dropped_pct,sessions_dropped
+null_l1_field,0,0.0,
+non_positive_price,0,0.0,
+non_positive_size,0,0.0,
+crossed_book,0,0.0,
+locked_book,0,0.0,
+trading_halt,0,0.0,
+duplicate_timestamp,156171,7.398453710809812,
+implausible_price_jump,0,0.0,
+stale_repeated_quote,1000860,47.41479776015463,
+session_shorter_than_max_horizon,0,,0.0

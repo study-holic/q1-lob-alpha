@@ -1,0 +1,5 @@
+signal,peak_abs_ic,peak_horizon,ic_mean_across_instruments,best_evidence_horizon,t_across_instruments,instruments_same_sign,predictive,survives_multiple_testing,selected_out_of_sample,positive_out_of_sample,gross_pnl,net_pnl_at_baseline_cost,net_profitable_at_baseline_cost,breakeven_cost_multiple,randomisation_pvalue_gross,randomisation_pvalue_net,randomisation_pvalue_floor,beats_shifted_null,survives_all_gates
+ofi,0.1678786358513598,100,0.1636647792506782,25,17.993221982762105,1.0,True,True,False,False,0.421662244751141,-8.429609910227903,False,0.04763860351011196,0.04,0.04,0.04,True,False
+queue_imbalance,0.2920279390518332,100,0.1496928740101766,5,7.319800945182456,1.0,True,True,False,False,0.7200869127532448,-17.94268713052971,False,0.038584130691568665,0.04,0.04,0.04,True,False
+microprice_deviation,0.3060257328449498,100,0.1048955666128644,1,7.556103177449148,1.0,True,True,True,False,0.7038110165468208,-16.69888656242096,False,0.04044263904220339,0.04,0.04,0.04,True,False
+spread,0.008732907650325,100,0.0051687233568181,1,1.0660260984175516,0.6,False,False,True,False,-0.006737034870221592,-6.59672210149189,False,,0.08,0.04,0.04,False,False

@@ -1,0 +1,21 @@
+# The control. Ground truth here is that nothing predicts anything.
+#
+# If this config produces a significant IC, a positive walk-forward Sharpe, or
+# a result that beats the shifted null, the finding is a bug in the pipeline,
+# not an edge. Run it before believing anything the baseline says.
+
+experiment:
+  name: null_market
+  seed: 7
+
+data:
+  synthetic:
+    mode: "null"
+    beta: 0.0
+    n_events: 30000
+    seed: 7
+
+backtest:
+  strategy:
+    signals: [ofi]
+    threshold: 1.0

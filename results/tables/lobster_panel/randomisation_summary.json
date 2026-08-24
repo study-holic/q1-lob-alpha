@@ -1,0 +1,7 @@
+{
+  "real_sharpe": -0.17729833389648528,
+  "real_net_pnl": -8.429609910227903,
+  "empirical_pvalue_gross": 0.04,
+  "empirical_pvalue_net": 0.04,
+  "real_sharpe_gross": 0.03165923684514585
+}

@@ -1,0 +1,11 @@
+{
+  "n_candidates": 24,
+  "winner": "spread@3.0",
+  "winner_in_sample": -0.015821217355994285,
+  "winner_out_of_sample": -0.003671408992388947,
+  "inflation": -0.012149808363605338,
+  "mean_in_sample": -0.17586371327337766,
+  "mean_out_of_sample": -0.11673071329904337,
+  "best_possible_out_of_sample": -0.003671408992388947,
+  "regret_vs_oracle": 0.0
+}

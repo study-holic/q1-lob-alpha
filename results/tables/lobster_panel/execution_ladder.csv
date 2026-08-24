@@ -1,0 +1,5 @@
+execution_level,description,gross_pnl,net_pnl,sharpe_net
+1,"level 1 (mid_fill), latency 1 event(s)",0.421662244751141,0.421662244751141,0.03165923684514585
+2,"level 2 (cross_spread), latency 1 event(s)",0.421662244751141,-8.429609910227903,-0.17729833389648528
+3,"level 3 (cross_spread_plus_slippage), latency 1 event(s)",0.421662244751141,-12.855245987717426,-0.18399131563230697
+4,"level 4 (partial_fills), latency 1 event(s)",0.39684516148199656,-6.779890801777791,-0.2328208790105594

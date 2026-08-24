@@ -1,0 +1,18 @@
+# A wider cost sweep with a harsher execution assumption, used for the
+# flagship cost chart in the paper.
+
+experiment:
+  name: cost_sensitivity
+
+backtest:
+  execution:
+    level: 3
+    slippage_fraction_of_spread: 0.25
+  costs:
+    fixed_bps: 0.2
+    half_spread_multiplier: 1.0
+    impact_coefficient: 0.5
+
+robustness:
+  cost_multiples: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0, 5.0]
+  run: [cost, threshold, execution]

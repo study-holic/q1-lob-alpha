@@ -1,0 +1,5 @@
+signal,gross_pnl,net_pnl_at_baseline_cost,net_profitable_at_baseline_cost,breakeven_cost_multiple,randomisation_pvalue_gross,randomisation_pvalue_net,randomisation_pvalue_floor,beats_shifted_null
+ofi,0.421662244751141,-8.429609910227903,False,0.04763860351011196,0.04,0.04,0.04,True
+queue_imbalance,0.7200869127532448,-17.94268713052971,False,0.038584130691568665,0.04,0.04,0.04,True
+microprice_deviation,0.7038110165468208,-16.69888656242096,False,0.04044263904220339,0.04,0.04,0.04,True
+spread,-0.006737034870221592,-6.59672210149189,False,,0.08,0.04,0.04,False

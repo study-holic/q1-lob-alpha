@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.ipynb_checkpoints/
+
+# Raw and processed data are never redistributed. LOBSTER samples are a free
+# download; see data/README.md for how to fetch them.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Exploratory runs are ignored, but the published panel is kept: the paper
+# cites these tables, and a reader must be able to check a number without
+# re-running the pipeline.
+results/tables/*
+results/figures/*
+results/summary_*.md
+!results/tables/lobster_panel/
+!results/figures/lobster_panel/
+!results/summary_lobster_panel.md
+
+# LaTeX build artefacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.lof
+paper/*.lot
